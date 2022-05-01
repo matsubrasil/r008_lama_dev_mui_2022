@@ -9,7 +9,7 @@ export const Rightbar: React.FC = () => {
       p={2}
       sx={{ display: { xs: 'none', sm: 'block' } }}
     >
-      Right bar
+      <Box position='fixed'>Right bar</Box>
     </Box>
   );
 };
