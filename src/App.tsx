@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Stack } from '@mui/material';
-import { Feed, Navbar, Rightbar, Sidebar } from './components';
+import { Add, Feed, Navbar, Rightbar, Sidebar } from './components';
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         <Feed />
         <Rightbar />
       </Stack>
+      <Add />
     </Box>
   );
 }

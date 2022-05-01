@@ -26,7 +26,12 @@ export const Sidebar: React.FC = () => {
   }));
 
   return (
-    <Box flex={1} p={2} sx={{ display: { xs: 'none', sm: 'block' } }}>
+    <Box
+      flex={1}
+      p={2}
+      sx={{ display: { xs: 'none', sm: 'block' } }}
+      bgcolor='skyblue'
+    >
       <Box position='fixed'>
         <List>
           <ListItem disablePadding>
