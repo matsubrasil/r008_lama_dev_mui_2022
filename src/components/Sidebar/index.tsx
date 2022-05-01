@@ -6,6 +6,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  PaletteMode,
   styled,
   Switch,
 } from '@mui/material';
@@ -20,18 +21,18 @@ import {
   Storefront,
 } from '@mui/icons-material';
 
-export const Sidebar: React.FC = () => {
+interface SidebarProps {
+  mode: 'light' | 'dark';
+  setMode: (mode: PaletteMode) => void;
+}
+
+export const Sidebar: React.FC<SidebarProps> = ({ setMode, mode }) => {
   const ListItemIconCustom = styled(ListItemIcon)(({ theme }) => ({
     minWidth: theme.spacing(4),
   }));
 
   return (
-    <Box
-      flex={1}
-      p={2}
-      sx={{ display: { xs: 'none', sm: 'block' } }}
-      bgcolor='skyblue'
-    >
+    <Box flex={1} p={2} sx={{ display: { xs: 'none', sm: 'block' } }}>
       <Box position='fixed'>
         <List>
           <ListItem disablePadding>
@@ -95,7 +96,9 @@ export const Sidebar: React.FC = () => {
               <ListItemIconCustom>
                 <ModeNight />
               </ListItemIconCustom>
-              <Switch />
+              <Switch
+                onChange={(e) => setMode(mode === 'light' ? 'dark' : 'light')}
+              />
             </ListItemButton>
           </ListItem>
         </List>

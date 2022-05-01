@@ -49,7 +49,7 @@ export const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <AppBar position='sticky' elevation={0}>
+    <AppBar position='sticky'>
       <StyledToolbar>
         <Typography variant='h6' sx={{ display: { xs: 'none', sm: 'block' } }}>
           Lama Dev
